@@ -16,4 +16,7 @@
 
 # display current directory contents, including hidden files (.) with long format
 4-listmorefiles
+
+# display current directory contents numerically and hidden files (starting with .)
+5-listfilesdigitonly
 ```
