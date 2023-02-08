@@ -7,4 +7,7 @@
 
 # display the content list of current directory
 1-listit
+
+# change working directory to user's home directory
+2-bring_me_home
 ```
