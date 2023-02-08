@@ -28,4 +28,7 @@
 
 # delete the file betty in /tmp/my_first_directory
 8-firstdelete
+
+# delete my_first_directory in /tmp/
+9-firstdirdeletion
 ```
