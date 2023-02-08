@@ -34,4 +34,7 @@
 
 # change the working directory back to the previous one
 10-back
+
+# list all the files (even hidden ones) in the current dir, parent of working dir, and /boot/
+11-lists
 ```
