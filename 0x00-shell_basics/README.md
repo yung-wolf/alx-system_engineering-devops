@@ -19,4 +19,7 @@
 
 # display current directory contents numerically and hidden files (starting with .)
 5-listfilesdigitonly
+
+# creates my_first_directory in the /tmp/ directory
+6-firstdirectory
 ```
