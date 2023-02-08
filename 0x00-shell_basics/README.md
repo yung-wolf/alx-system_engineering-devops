@@ -10,4 +10,7 @@
 
 # change working directory to user's home directory
 2-bring_me_home
+
+# display contents of current directory in long format
+3-listfiles
 ```
