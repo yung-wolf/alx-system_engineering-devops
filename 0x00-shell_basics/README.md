@@ -13,4 +13,7 @@
 
 # display contents of current directory in long format
 3-listfiles
+
+# display current directory contents, including hidden files (.) with long format
+4-listmorefiles
 ```
