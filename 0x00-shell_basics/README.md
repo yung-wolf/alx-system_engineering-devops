@@ -31,4 +31,7 @@
 
 # delete my_first_directory in /tmp/
 9-firstdirdeletion
+
+# change the working directory back to the previous one
+10-back
 ```
