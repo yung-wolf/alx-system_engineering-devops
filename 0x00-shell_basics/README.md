@@ -37,4 +37,7 @@
 
 # list all the files (even hidden ones) in the current dir, parent of working dir, and /boot/
 11-lists
+
+# Write a script that prints the type of the file named iamafile. The file iamafile in the /tmp directory 
+12-file_type
 ```
