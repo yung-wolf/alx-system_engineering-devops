@@ -37,4 +37,7 @@
 
 # add execute permissions to all subdirectories of current directory for user,group,others. Regular files excluded
 11-directories_permissions
+
+# create a dir in working directory and set permissions to 751
+12-directory_permissions
 ```
