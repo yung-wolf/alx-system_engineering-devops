@@ -46,4 +46,7 @@
 
 # copy -u all .html files from working to parent directory
 14-copy_html
+
+# moves all files that begin with an uppercase to /tmp/u
+100-lets_move 
 ```
