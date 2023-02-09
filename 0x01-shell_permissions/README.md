@@ -34,4 +34,7 @@
 
 # set the permission of 'hello' file to that of 'olleh'
 10-mirror_permissions
+
+# add execute permissions to all subdirectories of current directory for user,group,others. Regular files excluded
+11-directories_permissions
 ```
