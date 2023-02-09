@@ -19,4 +19,7 @@
 
 # adds execute permissions to 'hello' file
 5-execute
+
+# adds execute permissions to owner and group owners, and read permissions to other users
+6-multiple_permissions
 ```
