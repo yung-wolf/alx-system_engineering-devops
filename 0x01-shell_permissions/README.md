@@ -16,4 +16,7 @@
 
 # create empty file 'hello'
 4-empty
+
+# adds execute permissions to 'hello' file
+5-execute
 ```
