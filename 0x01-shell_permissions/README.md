@@ -25,4 +25,7 @@
 
 # adds execute permissions to user, group, others of 'hello' file
 7-everybody
+
+# sets no permissions to user and group, but all permissions to others of 'hello' file
+8-James_Bond
 ```
