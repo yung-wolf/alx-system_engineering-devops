@@ -22,4 +22,7 @@
 
 # adds execute permissions to owner and group owners, and read permissions to other users
 6-multiple_permissions
+
+# adds execute permissions to user, group, others of 'hello' file
+7-everybody
 ```
