@@ -40,4 +40,7 @@
 
 # Write a script that prints the type of the file named iamafile. The file iamafile in the /tmp directory 
 12-file_type
+
+# create a soft link __ls__ to /bin/ls
+13-symbolic_link
 ```
