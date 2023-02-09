@@ -28,4 +28,7 @@
 
 # sets no permissions to user and group, but all permissions to others of 'hello' file
 8-James_Bond
+
+# sets permissions of 'hello' file in a specific order
+9-John_Doe
 ```
