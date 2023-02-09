@@ -49,4 +49,7 @@
 
 # change the owner and group owner of '_hello' to vincent and staff respectively
 101-symbolic_link_permissions
+
+# change the owner of 'hello' file to betty if user=guillaume
+102-if_only
 ```
