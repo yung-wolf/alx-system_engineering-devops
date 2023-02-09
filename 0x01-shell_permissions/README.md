@@ -40,4 +40,7 @@
 
 # create a dir in working directory and set permissions to 751
 12-directory_permissions
+
+# change group owner of 'hello' file to 'school'
+13-change_group
 ```
