@@ -43,4 +43,7 @@
 
 # create a soft link __ls__ to /bin/ls
 13-symbolic_link
+
+# copy -u all .html files from working to parent directory
+14-copy_html
 ```
