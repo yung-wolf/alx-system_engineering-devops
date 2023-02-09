@@ -46,4 +46,7 @@
 
 # change the owner to 'vincent' and group to 'staff' for all files and directory in working directory
 100-change_owner_and_group
+
+# change the owner and group owner of '_hello' to vincent and staff respectively
+101-symbolic_link_permissions
 ```
