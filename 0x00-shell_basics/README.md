@@ -48,5 +48,8 @@
 14-copy_html
 
 # moves all files that begin with an uppercase to /tmp/u
-100-lets_move 
+100-lets_move
+
+# delete all files that end with '~'
+101-clean_emacs 
 ```
