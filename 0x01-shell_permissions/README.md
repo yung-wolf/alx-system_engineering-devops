@@ -13,4 +13,7 @@
 
 # change owner of file 'hello' to 'betty'
 3-new_owner
+
+# create empty file 'hello'
+4-empty
 ```
