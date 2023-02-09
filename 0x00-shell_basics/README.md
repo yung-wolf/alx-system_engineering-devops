@@ -51,5 +51,8 @@
 100-lets_move
 
 # delete all files that end with '~'
-101-clean_emacs 
+101-clean_emacs
+
+# create three directories at once
+102-tree 
 ```
