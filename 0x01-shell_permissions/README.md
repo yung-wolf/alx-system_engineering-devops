@@ -31,4 +31,7 @@
 
 # sets permissions of 'hello' file in a specific order
 9-John_Doe
+
+# set the permission of 'hello' file to that of 'olleh'
+10-mirror_permissions
 ```
