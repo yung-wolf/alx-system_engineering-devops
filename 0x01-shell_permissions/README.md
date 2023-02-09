@@ -10,4 +10,7 @@
 
 # prints all the groups user is in
 2-groups
+
+# change owner of file 'hello' to 'betty'
+3-new_owner
 ```
