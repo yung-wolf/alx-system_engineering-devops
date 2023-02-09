@@ -43,4 +43,7 @@
 
 # change group owner of 'hello' file to 'school'
 13-change_group
+
+# change the owner to 'vincent' and group to 'staff' for all files and directory in working directory
+100-change_owner_and_group
 ```
