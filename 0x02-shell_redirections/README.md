@@ -22,4 +22,7 @@
 
 # Write a script that displays the third line of the file iacta
 6-third_line
+
+# Write a script that writes into the file ls_cwd_content the result of the command ls -la
+8-cwd_state
 ```
