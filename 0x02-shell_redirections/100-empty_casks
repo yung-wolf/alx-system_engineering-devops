@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 2 -type d -or -type f -empty -printf "%f\n"
+find . -maxdepth 2 -type d,f -empty -printf "%f\n"
