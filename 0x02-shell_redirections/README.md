@@ -62,4 +62,7 @@
 
 # Replace all characters A and c from input to Z and e respectively.
 19-AZ
+
+# Without C, you would live in hiago
+20-hiago
 ```
