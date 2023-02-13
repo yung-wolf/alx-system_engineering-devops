@@ -47,4 +47,7 @@
 
 # Display lines containing the pattern “root” from the file /etc/passwd
 14-findthatword
+
+# Display the number of lines that contain the pattern “bin” in the file /etc/passwd
+15-countthatword
 ```
