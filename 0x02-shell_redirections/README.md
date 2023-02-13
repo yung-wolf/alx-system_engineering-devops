@@ -65,4 +65,7 @@
 
 # Without C, you would live in hiago
 20-hiago
+
+# Write a script that reverse its input.
+21-reverse
 ```
