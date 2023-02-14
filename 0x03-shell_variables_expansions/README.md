@@ -35,4 +35,7 @@
 
 # Write a script that displays the result of BREATH to the power LOVE
 10-love_exponent_breath
+
+# Write a script that converts a number from base 2 to base 10
+11-binary_to_decimal
 ```
