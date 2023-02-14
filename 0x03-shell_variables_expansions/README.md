@@ -22,4 +22,7 @@
 
 # Create a script that creates a new local variable.
 6-create_loacl_variable
+
+# Create a script that creates a new global variable.
+7-create_global_variable
 ```
