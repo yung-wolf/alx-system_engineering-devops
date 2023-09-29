@@ -1,16 +1,6 @@
 #!/usr/bin/env bash
 # Write a Bash script that displays To infinity and beyond indefinitely.
 
-terminate_script()
-{
-	echo "Terminated"
-	exit 0
-}
-
-# Set trap call to terminate_script function when SIGTERM is received
-
-trap "terminate_script" SIGTERM
-
 while true; do
 	echo "To infinity and beyond"
 	sleep 2
