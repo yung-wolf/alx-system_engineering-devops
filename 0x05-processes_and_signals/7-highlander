@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Write a Bash script that displays:
+
+# To infinity and beyond indefinitely
+# With a sleep 2 in between each iteration
+# I am invincible!!! when receiving a SIGTERM signal
+
+terminate_script()
+{
+	echo "I am invincible!!!"
+}
+
+kill_script()
+{
+	echo "Killed"
+	exit 0
+}
+
+# Set trap call to terminate_script funct when SIGTERM is received
+trap "terminate_script" SIGTERM
+
+# Set trap to kill_script funct when SIGKILL is received
+trap "kill_script" SIGKILL
+
+while true; do
+	echo "To infinity and beyond"
+	sleep 2
+done
