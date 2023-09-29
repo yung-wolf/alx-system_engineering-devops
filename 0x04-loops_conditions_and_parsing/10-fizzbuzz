@@ -2,7 +2,7 @@
 # Write a Bash script that displays numbers from 1 to 100.
 
 i=1
-until [ $i -eq 100 ]; do
+until [ $i -eq 101 ]; do
 	if [ $((i % 3)) -eq 0 ] && [ $((i % 5)) -eq 0 ]; then
 		echo "FizzBuzz"
 	elif [ $((i % 3)) -eq 0 ]; then
