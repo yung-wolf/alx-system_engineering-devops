@@ -2,17 +2,23 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-
+/**
+ * infinite_while - runs an infinite while loop
+ * Return: 0 on success
+ */
 int infinite_while(void)
 {
-    while (1)
-    {
-        sleep(1);
-    }
-    return (0);
+	while (1)
+	{
+		sleep(1);
+	}
+	return (0);
 }
 
-
+/**
+ * main - runs main code
+ * Return: 0 on success
+ */
 int main(void)
 {
 	pid_t child_pid;
