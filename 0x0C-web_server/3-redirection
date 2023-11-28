@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Configure a new server
+
+# Install Nginx on web server `web-01`
+sudo apt-get -y update
+sudo apt-get -y install nginx
+
+# Adjust firewall to allow service
+sudo ufw allow 'Nginx HTTP'
+
+# Overwrite html file w/ "Hello World!" string
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+
+redirect_301="\\\tlocation /redirect_me {\n\t\t return 301 https://google.com;\n\t}\n"
+
+sudo sed -i "30i $redirect_301" /etc/nginx/sites-available/default
+
+# Start Nginx to apply the changes
+sudo systemctl start nginx
