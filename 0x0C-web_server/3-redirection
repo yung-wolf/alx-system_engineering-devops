@@ -16,4 +16,4 @@ redirect_301="\\\tlocation /redirect_me {\n\t\t return 301 https://google.com;\n
 sudo sed -i "30i $redirect_301" /etc/nginx/sites-available/default
 
 # Start Nginx to apply the changes
-sudo systemctl start nginx
+sudo service nginx start
