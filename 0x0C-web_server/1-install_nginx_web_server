@@ -9,3 +9,4 @@ sudo ufw allow 'Nginx HTTP'
 
 # Overwrite html file w/ "Hello World!" string
 echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
+sudo service nginx start
