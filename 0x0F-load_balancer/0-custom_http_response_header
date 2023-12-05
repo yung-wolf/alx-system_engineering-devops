@@ -20,7 +20,9 @@ sudo sed -i "30i $redirect_301" /etc/nginx/sites-available/default
 # 404 page with custome text
 echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
 
-page_404="error_page 404 /custom_404.html;\n\\tlocation = /custom_404.html {\n\t\t root /var/www/html;\n\t\tinternal;\n\t}\n"style="#error_page 404 /404.html;"
+page_404="error_page 404 /custom_404.html;\n\\tlocation = /custom_404.html {\n\t\t root /var/www/html;\n\t\tinternal;\n\t}\n"
+
+style="#error_page 404 /404.html;"
 
 sudo sed -i "s@$style@$page_404@" /etc/nginx/sites-available/default
 
