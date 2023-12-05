@@ -22,11 +22,10 @@ echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
 
 page_404="error_page 404 /custom_404.html;\n\\tlocation = /custom_404.html {\n\t\t root /var/www/html;\n\t\tinternal;\n\t}\n"
 
-
 sudo sed -i "34i $page_404" /etc/nginx/sites-available/default
 
 # ADD CUSTOM HEADER
-custom_header=add_header X-Served-By $hostname;
+custom_header="\\\tadd_header X-Served-By $HOSTNAME;
 sudo sed -i "24i $custom_header" /etc/nginx/sites-available/default
 
 sudo service nginx restart
