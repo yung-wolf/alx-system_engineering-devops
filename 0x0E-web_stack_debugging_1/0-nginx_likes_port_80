@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Install Nginx on web server `web-01`
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+
+# Adjust firewall to allow service
+sudo ufw allow 'Nginx HTTP'
+
+sudo service nginx start
