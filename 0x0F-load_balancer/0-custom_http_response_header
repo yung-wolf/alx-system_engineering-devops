@@ -2,6 +2,29 @@
 # Configure Nginx so that its HTTP response contains a custom
 # header (on web-01 and web-02)
 
+sudo apt-get update
+sudo apt-get -y install nginx
+
+# Adjust firewall to allow service
+sudo ufw allow 'Nginx HTTP'
+
+sudo service nginx start
+
+# Overwrite html file w/ "Hello World!" string
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+
+# 301 redirect page
+redirect_301="\\\tlocation /redirect_me {\n\t\t return 301 https://google.com;\n\t}\n"
+sudo sed -i "30i $redirect_301" /etc/nginx/sites-available/default
+
+# 404 page with custome text
+echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+
+page_404="error_page 404 /custom_404.html;\n\\tlocation = /custom_404.html {\n\t\t root /var/www/html;\n\t\tinternal;\n\t}\n"style="#error_page 404 /404.html;"
+
+sudo sed -i "s@$style@$page_404@" /etc/nginx/sites-available/default
+
+# ADD CUSTOM HEADER
 custom_header=add_header X-Served-By $hostname;
 sudo sed -i "24i $custom_header" /etc/nginx/sites-available/default
 
