@@ -1,0 +1,14 @@
+sudo apt-get update
+sudo apt-get install -y ufw
+
+# Allow SSH traffic on port 22
+sudo ufw allow OpenSSH
+
+# Allow incoming traffic on port 80 and 443
+sudo ufw allow "Nginx Full"
+
+# alt
+sudo ufw allow proto tcp from any to any port 80, 443
+
+# By default when UFW is enabled, it blocks all incoming traffic
+sudo ufw enable
