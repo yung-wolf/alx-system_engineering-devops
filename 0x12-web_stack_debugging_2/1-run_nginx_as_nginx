@@ -6,7 +6,6 @@ sudo apt-get update
 sudo apt-get install -y nginx
 
 # Create non root user = nginx
-groupadd -r nginx
 useradd nginx
 
 # start nginx as non root user
