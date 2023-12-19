@@ -4,7 +4,7 @@
 if [[ $# -eq 0 ]]; then
         whoami
 elif [[ $# -eq 1 ]]; then
-        sudo -u $1 whoami
+        sudo -u "$1" whoami
 else
         echo "Too many args passed"
         echo "Usage: <script> <arg>"
