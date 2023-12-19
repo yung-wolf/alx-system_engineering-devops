@@ -10,8 +10,8 @@ useradd nginx
 
 # listen on port 8080
 nginx_conf="/etc/nginx/sites-enabled/default"
-sed -i "22c \\\tlisten 8080 default_server;" "$nginx_conf"
-sed -i "23c \\\tlisten [::]:8080 default_server;" "$nginx_conf"
+sed -i "22c \\\tlisten *:8080;" "$nginx_conf"
+sed -i "23c \\\tlisten [::]:8080;" "$nginx_conf"
 
 # start nginx as non root user
 sudo -u nginx service nginx start
