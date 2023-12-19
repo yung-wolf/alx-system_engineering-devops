@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Write a Bash script that generates a MySQL dump and creates a compressed archive out of it.
+
+if [[ -z "$1" ]]; then
+    echo "Usage: $0 <user_password>"
+    exit 1
+fi
+
+# generate mysql dump containing all dbs
+sudo mysqldump -u root -p"$1" --all-databases > backup.sql
+
+# create archive
+ARCHIVE=$(date +"%d-%m-%Y").tar.gz
+
+# compress mysql dump into .tar.gz archive
+gzip -c backup.sql > "$ARCHIVE"
+
+echo "Backup Successful"
