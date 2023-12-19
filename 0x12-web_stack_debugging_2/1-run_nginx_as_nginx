@@ -8,5 +8,9 @@ sudo apt-get install -y nginx
 # Create non root user = nginx
 useradd nginx
 
+# listen on port 8080
+nginx_conf="/etc/nginx/nginx.conf"
+sed -i "s/^listen .*;/listen 8080;/g" "$nginx_conf"
+
 # start nginx as non root user
 sudo -u nginx service nginx start
