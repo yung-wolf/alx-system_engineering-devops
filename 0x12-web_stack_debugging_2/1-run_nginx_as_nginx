@@ -7,7 +7,7 @@ sudo apt-get install -y nginx
 
 # Create non root user = nginx
 groupadd -r nginx
-useradd nginx -r -g nginx -d /var/cache/nginx -s /sbin/nologin
+useradd nginx
 
 # start nginx as non root user
 sudo -u nginx service nginx start
