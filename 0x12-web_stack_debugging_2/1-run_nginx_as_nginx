@@ -1,19 +1,12 @@
 #!/usr/bin/env bash
 # Configure nginx to run as non root user
 
-# install nginx if not present
-sudo apt-get update
-sudo apt-get install -y nginx
-
-# Create non root user = nginx
-groupadd -r nginx
-useradd nginx -r -g nginx -d /var/cache/nginx -s /sbin/nologin
+# start nginx as non root user
+# grant permission to file /etc/nginx/nginx.conf
+sudo chmod 744 /etc/nginx/nginx.conf
+sudo -u nginx service nginx start
 
 # listen on port 8080
 nginx_conf="/etc/nginx/sites-enabled/default"
 sed -i "22c \\\tlisten *:8080;" "$nginx_conf"
 sed -i "23c \\\tlisten [::]:8080;" "$nginx_conf"
-
-# start nginx as non root user
-sudo service nginx stop
-sudo -u nginx service nginx start
