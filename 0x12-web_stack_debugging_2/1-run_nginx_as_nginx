@@ -3,7 +3,7 @@
 
 # start nginx as non root user
 # grant permission to file /etc/nginx/nginx.conf
-sudo chmod 744 /etc/nginx/nginx.conf
+chmod 744 /etc/nginx/nginx.conf
 sudo -u nginx service nginx start
 
 # listen on port 8080
