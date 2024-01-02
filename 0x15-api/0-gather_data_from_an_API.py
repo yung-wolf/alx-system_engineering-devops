@@ -40,7 +40,7 @@ def get_employee_todo_progress(id):
                     completed_tasks += 1
 
         print(f"Employee {name} is done with tasks", end='')
-        print(f"({completed_tasks}/{total_tasks})")
+        print(f"({completed_tasks}/{total_tasks}):")
         for t in todos:
             print(f"\t {t}")
 
