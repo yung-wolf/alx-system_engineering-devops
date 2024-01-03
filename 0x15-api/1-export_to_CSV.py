@@ -9,39 +9,38 @@ import requests
 import sys
 
 
-def get_employee_todo_progress(id):
+def get_employee_todo_progress(employee_id):
     """
-        Returns the information about his/her TODO list
-        progress using employess ID.
+    Returns the information about his/her TODO list
+    progress using employess ID.
     """
 
-    user_base_url = f'https://jsonplaceholder.typicode.com/users/{id}'
-    base_url = f'https://jsonplaceholder.typicode.com/todos'
+    user_base_url = f'https://jsonplaceholder.typicode.com/users/{employee_id}'
+    base_url = 'https://jsonplaceholder.typicode.com/todos'
 
-    # request to API
-    resp = requests.get(base_url)
+    # Request to API
     user_resp = requests.get(user_base_url)
+    todo_resp = requests.get(base_url)
 
-    # check resp status code for success or otherwise
-    if resp.status_code == 200 and user_resp.status_code == 200:
-        data = resp.json()
+    # Check response status code for success or otherwise
+    if user_resp.status_code == 200 and todo_resp.status_code == 200:
         user_data = user_resp.json()
+        todo_data = todo_resp.json()
 
-        # get user name
-        name = user_data['username']
+        # Get user details
+        username = user_data['username']
 
-        # get data for CSV
-        csv_data = []
-        for task in data:
-            if task["userId"] == id:
-                task_completed_status = str(task["completed"])
-                task_title = task["title"]
-                csv_data.append([id, name, task_completed_status, task_title])
+        # Create CSV data using list comprehension
+        csv_data = [
+            [str(employee_id), username, str(task['completed']), task['title']]
+            for task in todo_data
+            if task['userId'] == employee_id
+        ]
 
-        # Save data to CSV FILE
-        csv_file_name = f"{id}.csv"
-        with open(csv_file_name, "w", newline="") as cfile:
-            csv_writer = csv.writer(cfile)
+        # Save data to CSV file
+        csv_file_name = f"{employee_id}.csv"
+        with open(csv_file_name, "w", newline="") as csv_file:
+            csv_writer = csv.writer(csv_file, quoting=csv.QUOTE_MINIMAL)
             csv_writer.writerows(csv_data)
 
     else:
@@ -52,9 +51,10 @@ def get_employee_todo_progress(id):
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print(f"Usage: script <employee_id>")
+        sys.exit(1)
 
     try:
-        id = int(sys.argv[1])
-        get_employee_todo_progress(id)
+        employee_id = int(sys.argv[1])
+        get_employee_todo_progress(employee_id)
     except ValueError:
         print("ERROR: Wrong ID Type")
