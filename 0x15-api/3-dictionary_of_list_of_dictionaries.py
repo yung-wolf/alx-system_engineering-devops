@@ -38,7 +38,7 @@ def get_employee_todo_progress():
 
             for task in tds_data:
                 if task['userId'] == user_id:
-                    task_completed_status = str(task["completed"])
+                    task_completed_status = task["completed"]
                     task_title = task["title"]
                     json_data[str(user_id)].append(
                         {"username": username, "task": task_title,
