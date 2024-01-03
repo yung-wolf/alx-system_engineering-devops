@@ -34,13 +34,13 @@ def get_employee_todo_progress(id):
         json_data = {f"{id}": []}
         for task in data:
             if task["userId"] == id:
-                task_completed_status = str(task["completed"])
+                task_completed_status = task["completed"]
                 task_title = task["title"]
                 json_data[f"{id}"].append(
                   {"task": task_title, "completed": task_completed_status,
                    "username": name})
 
-        # Save data to CSV FILE
+        # Save data to JSON FILE
         json_file_name = f"{id}.json"
         with open(json_file_name, "w") as jsfile:
             json.dump(json_data, jsfile)
