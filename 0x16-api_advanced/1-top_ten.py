@@ -5,7 +5,6 @@ Holds a function - top_ten(subreddit)
 """
 
 import requests
-import sys
 
 
 def top_ten(subreddit):
@@ -14,9 +13,8 @@ def top_ten(subreddit):
         listed for a given subreddit.
     """
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
-    agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) \
-    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-    headers = {'User-Agent': agent, 'Allow-Redirects': 'false'}
+    headers = requests.utils.default_headers()
+    headers.update({'User-Agent': 'My User Agent 1.0'})
 
     r = requests.get(url, headers=headers, allow_redirects=False)
     if r.status_code == 200:
@@ -24,7 +22,3 @@ def top_ten(subreddit):
             print(r.json()['data']['children'][i]['data']['title'])
     else:
         print(None)
-
-
-if __name__ == "__main__":
-    top_ten(sys.argv[1])
