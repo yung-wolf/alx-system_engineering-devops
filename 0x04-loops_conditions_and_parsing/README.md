@@ -2,9 +2,9 @@
 These files illustrate essential system engineering and devOps concepts like loops, conditions, and parsing.
 
 ## Environment
-OS: Ubuntu 20.04 LTS
-Language: Bash
-Style Guide: Shellcheck
+- OS: Ubuntu 20.04 LTS
+- Language: Bash
+- Style Guide: Shellcheck
 
 ## Author
 yung-wolf
