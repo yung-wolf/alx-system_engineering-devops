@@ -63,7 +63,7 @@
 # Replace all characters A and c from input to Z and e respectively.
 19-AZ
 
-# Without C, you would live in hiago
+# Remove C from the word Chicago
 20-hiago
 
 # Write a script that reverse its input.
