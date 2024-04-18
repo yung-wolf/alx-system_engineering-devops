@@ -6,7 +6,7 @@ This project entails setting up the UFW on Web Server web-01. UFW must block all
 
 ## Environment
 - Language: Bash script
-- OS: Ubuntu 14.04 LTS
+- OS: Ubuntu 20.04 LTS
 - Web Server: Nginx
 - Load Balancer: HAProxy
 - Style guidelines: Shellcheck
