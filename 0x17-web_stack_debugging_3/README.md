@@ -15,4 +15,4 @@ Parameters:
 Note: Adjust the file path to according to your environment
 
 ## Author
-Edmund Eli Bansah - [Github](https://github.com/yung-wolf)
+Edmund Eli Bansah (yung-wolf) - [Github](https://github.com/yung-wolf)
