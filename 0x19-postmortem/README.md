@@ -1,1 +1,2 @@
 # 0x19. Postmortem
+A postmortem is a widely used tool in the tech industry. After any outage, the team in charge of the system will write a summary with two main goals. Firstly, to provide easy access to information detailing the cause of the outage for the rest of the company's employees. Outages can have a huge impact on a company, so managers and executives need to understand what happened and how it will impact their work. Secondly, to ensure that the root cause(s) of the outage has been discovered and that measures are taken to ensure it will be fixed.
