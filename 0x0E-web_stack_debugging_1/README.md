@@ -1,5 +1,12 @@
 # 0x0E. Web stack debugging #1
-Debugging a server the refuses to connect to 0 on port 80
+Debug what's keeping the Ubuntu container’s Nginx installation from listening on port 80
 
-# Author
-Edmund Eli Bansah (yung-wolf)
+## Environment
+- OS: Ubuntu 20.04 LTS
+- Language: Bash Script
+- Container: Docker
+- Web Server: Nginx
+- Style Guide: Shellcheck
+
+## Author
+yung-wolf
